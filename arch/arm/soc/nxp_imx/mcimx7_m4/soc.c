@@ -57,7 +57,8 @@ static void nxp_mcimx7_gpio_config(void)
 
 #ifdef CONFIG_GPIO_IMX_PORT_1
 	RDC_SetPdapAccess(RDC, rdcPdapGpio1,
-			  RDC_DOMAIN_PERM(CONFIG_DOMAIN_ID, RDC_DOMAIN_PERM_RW),
+			  RDC_DOMAIN_PERM(CONFIG_DOMAIN_ID, RDC_DOMAIN_PERM_RW) |
+			  RDC_DOMAIN_PERM(CONFIG_A7_DOMAIN_ID, RDC_DOMAIN_PERM_RW),
 			  false, false);
 	/* Enable gpio clock gate */
 	CCM_ControlGate(CCM, ccmCcgrGateGpio1, ccmClockNeededRunWait);
@@ -66,7 +67,8 @@ static void nxp_mcimx7_gpio_config(void)
 
 #ifdef CONFIG_GPIO_IMX_PORT_2
 	RDC_SetPdapAccess(RDC, rdcPdapGpio2,
-			  RDC_DOMAIN_PERM(CONFIG_DOMAIN_ID, RDC_DOMAIN_PERM_RW),
+			  RDC_DOMAIN_PERM(CONFIG_DOMAIN_ID, RDC_DOMAIN_PERM_RW) |
+			  RDC_DOMAIN_PERM(CONFIG_A7_DOMAIN_ID, RDC_DOMAIN_PERM_RW),
 			  false, false);
 	/* Enable gpio clock gate */
 	CCM_ControlGate(CCM, ccmCcgrGateGpio2, ccmClockNeededRunWait);

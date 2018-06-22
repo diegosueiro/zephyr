@@ -47,4 +47,8 @@ config DOMAIN_ID
 	int
 	default 1
 
+config A7_DOMAIN_ID
+	int
+	default 0
+
 endif # SOC_MCIMX7_M4
