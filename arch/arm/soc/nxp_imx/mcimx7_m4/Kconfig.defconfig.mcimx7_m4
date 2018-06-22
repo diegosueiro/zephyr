@@ -43,6 +43,14 @@ config UART_IMX
 
 endif # SERIAL
 
+if IPM
+
+config IPM_IMX
+        def_bool y
+
+endif # IPM
+
+
 config DOMAIN_ID
 	int
 	default 1

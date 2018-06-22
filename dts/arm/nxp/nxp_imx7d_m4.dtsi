@@ -201,6 +201,15 @@
 			label = "UART_7";
 			status = "disabled";
 		};
+
+		mub:mu@30AB0000 {
+                        compatible = "nxp,imx-mu";
+                        reg = <0x30AB0000 0x4000>;
+                        interrupts = <97 0>;
+                        label = "MU_B";
+                        status = "disabled";
+                };
+
 	};
 };
 
