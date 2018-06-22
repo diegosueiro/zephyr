@@ -21,4 +21,8 @@
 
 #define RL_USE_STATIC_API (0)
 
+#ifdef CONFIG_SOC_SERIES_IMX7_M4
+#define RL_BUFFER_COUNT (256)
+#endif
+
 #endif /* _RPMSG_CONFIG_H */
