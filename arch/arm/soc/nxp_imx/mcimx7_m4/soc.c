@@ -84,7 +84,8 @@ static void nxp_mcimx7_uart_config(void)
 #ifdef CONFIG_UART_IMX_UART_2
 	/* We need to grasp board uart exclusively */
 	RDC_SetPdapAccess(RDC, rdcPdapUart2,
-			RDC_DOMAIN_PERM(CONFIG_DOMAIN_ID, RDC_DOMAIN_PERM_RW),
+			RDC_DOMAIN_PERM(CONFIG_DOMAIN_ID, RDC_DOMAIN_PERM_RW) |
+			RDC_DOMAIN_PERM(CONFIG_A7_DOMAIN_ID, RDC_DOMAIN_PERM_RW),
 			false, false);
 	/* Select clock derived from OSC clock(24M) */
 	CCM_UpdateRoot(CCM, ccmRootUart2, ccmRootmuxUartOsc24m, 0, 0);
