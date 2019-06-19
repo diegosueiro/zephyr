@@ -1,0 +1,23 @@
+#
+# Copyright (c) 2019, Diego Sueiro
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: i.MX M4 Code Bus
+version: 0.1
+
+description: >
+  This binding gives a base representation of the i.MX M4 Code Bus
+
+inherits:
+  !include base.yaml
+
+properties:
+    compatible:
+      constraint: "nxp,imx-code-bus"
+
+    reg:
+      category: required
+
+...
